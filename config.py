@@ -26,9 +26,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "12637827")
+    API_HASH  = os.environ.get("API_HASH", "bd6f6b7a42292b9f165ae75c55bdf11f")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6313839103:AAG1nMFHjGurX5NpyEkLwxXl5kRYP4SV--0") 
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","pyro-botz")     
@@ -36,10 +36,10 @@ class Config(object):
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "")
+    START_PIC   = os.environ.get("START_PIC", "https://media.tenor.com/kvXMS__Bkd8AAAAC/hello-hi.gif")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "@aikobots") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001853509934"))
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
